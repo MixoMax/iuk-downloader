@@ -21,7 +21,6 @@ for tag in a_tags:
 # only keep links that contain "youtu" so all youtube.com / .de
 youtube_links = [link for link in links if "youtu" in link]
 
-
 # download all youtube links
 for link in youtube_links:
     subprocess.run(["yt-dlp", link, "-o", "downloads/%(title)s.%(ext)s"])
